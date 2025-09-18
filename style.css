@@ -3,7 +3,6 @@
 :root {
     --cor-primaria: #4d96ff;
     --cor-destaque: #6bbeff;
-    --cor-whatsapp: #25D366;
     --fundo-preto: #121212;
     --fundo-escuro: #1a1a1a;
     --fundo-card: #242424;
@@ -11,6 +10,10 @@
     --texto-cinza: #a0a0a0;
     --font-principal: "Poppins", sans-serif;
     --font-titulo: "Berkshire Swash", cursive;
+    --cor-linkedin: #0077B5;
+    --cor-github: #FFFFFF;
+    --cor-instagram: #E1306C;
+    --cor-whatsapp: #25D366;
 }
 
 * {
@@ -43,7 +46,6 @@ section {
     min-height: 100vh;
 }
 
-/* --- ESTILOS GERAIS DE COMPONENTES --- */
 .sr-only {
     position: absolute;
     width: 1px;
@@ -72,7 +74,6 @@ section {
     border-color: var(--cor-primaria);
 }
 
-/* --- Header --- */
 .header {
     background-color: transparent;
     padding: 1rem 7%;
@@ -134,8 +135,6 @@ section {
     width: calc(100% - 2rem);
 }
 
-
-/* --- Seção Home --- */
 .home {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -182,18 +181,43 @@ section {
     align-items: center;
     width: 40px;
     height: 40px;
-    border: 2px solid var(--cor-primaria);
+    border: 2px solid;
     border-radius: 50%;
     font-size: 1.2rem;
-    color: var(--cor-primaria);
     transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s;
 }
 
-.home-social a:hover {
-    background-color: var(--cor-primaria);
+.home-social a.linkedin-icon {
+    color: var(--cor-linkedin);
+    border-color: var(--cor-linkedin);
+}
+.home-social a.linkedin-icon:hover {
+    background-color: var(--cor-linkedin);
     color: var(--texto-claro);
     transform: scale(1.1);
-    box-shadow: 0 0 15px var(--cor-primaria);
+    box-shadow: 0 0 15px var(--cor-linkedin);
+}
+
+.home-social a.github-icon {
+    color: var(--cor-github);
+    border-color: var(--cor-github);
+}
+.home-social a.github-icon:hover {
+    background-color: var(--cor-github);
+    color: var(--fundo-preto);
+    transform: scale(1.1);
+    box-shadow: 0 0 15px var(--cor-github);
+}
+
+.home-social a.instagram-icon {
+    color: var(--cor-instagram);
+    border-color: var(--cor-instagram);
+}
+.home-social a.instagram-icon:hover {
+    background-color: var(--cor-instagram);
+    color: var(--texto-claro);
+    transform: scale(1.1);
+    box-shadow: 0 0 15px var(--cor-instagram);
 }
 
 .home-social a.whatsapp-icon {
@@ -201,13 +225,14 @@ section {
     border-color: var(--cor-whatsapp);
     animation: pulse 2s infinite;
 }
-
 .home-social a.whatsapp-icon:hover {
     background-color: var(--cor-whatsapp);
     color: var(--texto-claro);
+    transform: scale(1.1);
     box-shadow: 0 0 20px var(--cor-whatsapp);
     animation: none; 
 }
+
 
 .home-image {
     display: flex;
@@ -231,7 +256,6 @@ section {
     box-shadow: 0 0 50px var(--cor-destaque);
 }
 
-/* --- Seção Conquistas --- */
 .achievements {
     background-color: var(--fundo-preto);
 }
@@ -300,7 +324,6 @@ section {
     margin-bottom: 2rem;
 }
 
-/* --- Seção Sobre --- */
 .about {
     background-color: var(--fundo-escuro);
     display: grid;
@@ -393,7 +416,6 @@ section {
     font-size: 1.2rem;
 }
 
-/* --- Seção Habilidades --- */
 .skills {
     background-color: var(--fundo-preto);
 }
@@ -452,7 +474,6 @@ section {
     line-height: 1.6;
 }
 
-/* --- Footer --- */
 .footer {
     position: relative;
     padding: 3rem 7%;
@@ -510,7 +531,6 @@ section {
     color: var(--texto-cinza);
 }
 
-/* --- Animação Pulsante --- */
 @keyframes pulse {
     0% {
         transform: scale(1);
@@ -526,8 +546,6 @@ section {
     }
 }
 
-
-/* --- Scrollbar --- */
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -540,8 +558,6 @@ section {
     background-color: var(--cor-primaria);
     border-radius: 5px;
 }
-
-/* --- Media Queries (Responsividade) --- */
 @media (max-width: 992px) {
     .home {
         grid-template-columns: 1fr;
@@ -577,17 +593,14 @@ section {
     html {
         scroll-padding-top: 8rem;
     }
-    
     .header {
         flex-direction: column;
         align-items: center;
         padding: 1rem 5%;
     }
-
     .header.scrolled {
         padding: 0.5rem 5%;
     }
-
     .navbar {
         margin-top: 1rem;
         display: flex;
@@ -595,48 +608,17 @@ section {
         justify-content: center;
         gap: 0.5rem;
     }
-
     .navbar a {
         padding: 0.3rem 0.6rem;
         font-size: 1rem;
     }
-
     .navbar a::after {
         bottom: -3px;
         left: 0.6rem;
         width: calc(100% - 1.2rem);
     }
-
     section {
         padding: 5rem 5%;
     }
-
     .home-content h2 {
-        font-size: 2rem;
-    }
-    .home-content .typing-effect {
-        font-size: 1.5rem;
-    }
-    
-    .achievements-title h2,
-    .about-title h2,
-    .skills-title h2,
-    .contact-title {
-        font-size: 2rem;
-    }
-
-    .about-info {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 480px) {
-    .header .logo {
-        font-size: 1.7rem;
-    }
-
-    .navbar a {
-        font-size: 0.9rem;
-        padding: 0.2rem 0.4rem;
-    }
-}
+        font-size:
