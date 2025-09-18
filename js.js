@@ -21,22 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     const sections = document.querySelectorAll('section');
-    sections.forEach(sec => sec.classList.add('reveal')); 
-
-    const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('active');
-            }
-        });
-    }, {
-        threshold: 0.15 
-    });
-
-    document.querySelectorAll('.reveal').forEach(element => {
-        revealObserver.observe(element);
-    });
-
     const navLinks = document.querySelectorAll('.navbar a');
 
     const navObserver = new IntersectionObserver((entries) => {
@@ -52,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }, {
-        rootMargin: '-50% 0px -50% 0px' 
+        rootMargin: '-50% 0px -50% 0px'
     });
 
     sections.forEach(section => {
