@@ -245,7 +245,6 @@ section {
     margin-bottom: 2rem;
 }
 
-/* --- Seção Sobre --- */
 .about {
     background-color: var(--fundo-escuro);
     display: grid;
