@@ -15,7 +15,7 @@
     <header class="header">
         <a href="#home" class="logo">Italo<span>Soares</span></a>
         <nav class="navbar">
-            <a href="#home">Home</a>
+            <a href="#home" class="active">Home</a>
             <a href="#about">Sobre</a>
             <a href="#skills">Habilidades</a>
             <a href="#contact">Contato</a>
@@ -27,10 +27,12 @@
             <div class="home-content">
                 <h1 id="home-heading" class="sr-only">Seção Principal do Portfólio de Italo Soares</h1>
                 <h2>Olá, eu sou um</h2>
-                <h3 class="digitando">Desenvolvedor em formação.</h3>
+                <h3 class="typing-effect">Desenvolvedor em formação.</h3>
                 <a href="Currículo - Italo Soares de Lima e Silva.pdf" class="btn" download>Baixar Currículo</a>
             </div>
-            <img class="foto-perfil" src="foto-perfil.jpg" alt="Foto de perfil de Italo Soares" />
+            <div class="home-image">
+                <img class="foto-perfil" src="foto-perfil.jpg" alt="Foto de perfil de Italo Soares" />
+            </div>
         </section>
 
         <section id="about" class="about" aria-labelledby="about-heading">
@@ -38,12 +40,12 @@
                 <h2 id="about-heading">Sobre Mim</h2>
                 <p>Perfil Profissional - Tudo Sobre mim</p>
                 <div class="title-decoration" aria-hidden="true">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                    <span></span><span></span><span></span>
                 </div>
             </div>
-            <img src="foto-mim.jpg" alt="Foto de Italo Soares na seção Sobre Mim" />
+            <div class="about-img">
+                 <img src="foto-mim.jpg" alt="Foto de Italo Soares na seção Sobre Mim" />
+            </div>
             <div class="about-content">
                 <div class="about-text">
                     <h3>Quem sou eu:</h3>
@@ -125,8 +127,8 @@
         </div>
         <nav class="footer-nav">
             <a href="#home">Home</a>
-            <a href="#skills">Habilidades</a>
             <a href="#about">Sobre</a>
+            <a href="#skills">Habilidades</a>
         </nav>
         <p class="copyright">© 2025 Italo Soares | All Rights Reserved</p>
     </footer>
