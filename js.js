@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+
     const typed = new Typed('.typing-effect', {
         strings: [
             'Desenvolvedor em formação.',
@@ -9,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
         backSpeed: 60,
         loop: true
     });
+
     const header = document.querySelector('.header');
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
@@ -28,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }, {
-        
+        threshold: 0.15 
     });
 
     document.querySelectorAll('.reveal').forEach(element => {
