@@ -1,16 +1,11 @@
-function enviarWpp(event) {
-  event.preventDefault();
-
-  const nome = document.getElementById("nome").value;
-  const mensagem = document.getElementById("mensagem").value;
-
-  const telefone = "5571983466997";
-
-  const textoCompleto = `Olá, meu nome é ${nome}. Mensagem: ${mensagem}`;
-
-  const mensagemFormatada = encodeURIComponent(textoCompleto);
-
-  const url = `https://wa.me/${telefone}?text=${mensagemFormatada}`;
-
-  window.open(url, "_blank");
-}
+// Efeito de digitação para o título na seção Home
+const typed = new Typed('.digitando', {
+    strings: [
+        'Desenvolvedor em formação.',
+        'Estudante de Engenharia de Software.',
+        'Entusiasta de Tecnologia.'
+    ],
+    typeSpeed: 70,
+    backSpeed: 60,
+    loop: true
+});
